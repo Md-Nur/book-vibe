@@ -6,6 +6,7 @@ import ErrorPage from "./error-page";
 import Book from "./Components/Book/Book";
 import "./index.css";
 import Root from "./routes/root";
+import ListedBooks from "./Components/ListedBooks/ListedBooks"
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/book/:id",
+        loader: () => fetch("data.json"),
         element: <Book />,
+      },
+      {
+        path: "/listed-books",
+        // loader: async () => fetch("data.json"),
+        element: <ListedBooks />,
       },
     ],
   },

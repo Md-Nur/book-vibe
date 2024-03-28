@@ -1,21 +1,77 @@
+import { NavLink } from "react-router-dom";
 const Links = ({ myClasses }) => {
   return (
     <ul className={myClasses}>
       <li>
-        <a className="btn btn-outline btn-success">Home</a>
+        <NavLink
+          to="/"
+          className={({ isActive, isPending }) =>
+            isActive
+              ? "btn btn-outline btn-success"
+              : isPending
+              ? "pending"
+              : "py-3 font-semibold"
+          }
+        >
+          Home
+        </NavLink>
       </li>
 
       <li>
-        <a className="btn">Listed Books</a>
+        <NavLink
+          to="/listed-books"
+          className={({ isActive, isPending }) =>
+            isActive
+              ? "btn btn-outline btn-success"
+              : isPending
+              ? "pending"
+              : "py-3 font-semibold"
+          }
+        >
+          Listed Books
+        </NavLink>
       </li>
       <li>
-        <a className="btn">Pages to read</a>
+        <NavLink
+          to="/pages-to-read"
+          className={({ isActive, isPending }) =>
+            isActive
+              ? "btn btn-outline btn-success"
+              : isPending
+              ? "pending"
+              : "py-3 font-semibold"
+          }
+        >
+          Pages to read
+        </NavLink>
       </li>
       <li>
-        <a className="btn">About Us</a>
+        <NavLink
+          to="/about"
+          className={({ isActive, isPending }) =>
+            isActive
+              ? "btn btn-outline btn-success"
+              : isPending
+              ? "pending"
+              : "py-3 font-semibold"
+          }
+        >
+          About Us
+        </NavLink>
       </li>
       <li>
-        <a className="btn">Contact Us</a>
+        <NavLink
+          to="/contact"
+          className={({ isActive, isPending }) =>
+            isActive
+              ? "btn btn-outline btn-success"
+              : isPending
+              ? "pending"
+              : "py-3 font-semibold"
+          }
+        >
+          Contact Us
+        </NavLink>
       </li>
     </ul>
   );

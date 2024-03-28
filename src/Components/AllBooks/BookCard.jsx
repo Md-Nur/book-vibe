@@ -1,8 +1,12 @@
 import { FaRegStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const BookCard = ({ book }) => {
   return (
-    <div className="card bg-base-100 shadow-xl border border-gray-300">
+    <Link
+      to={`/book/${book.bookId}`}
+      className="card bg-base-100 shadow-xl border border-gray-300"
+    >
       <figure className="m-6 p-8 bg-base-200 rounded-xl">
         <img src={book.image} alt="book" className="h-44" />
       </figure>
@@ -22,10 +26,12 @@ const BookCard = ({ book }) => {
         <hr />
         <div className="card-actions flex justify-between font-semibold">
           <span>{book.category}</span>
-          <span className="flex gap-1 items-center">{book.rating} <FaRegStar /></span>
+          <span className="flex gap-1 items-center">
+            {book.rating} <FaRegStar />
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
