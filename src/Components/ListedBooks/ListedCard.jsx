@@ -39,7 +39,7 @@ const ListedCard = ({ book }) => {
           </span>
         </p>
         <hr />
-        <div className="flex gap-4">
+        <div className="flex gap-1 lg:gap-4 flex-wrap">
           <button className="btn rounded-full btn-info">
             Category: {book.category}
           </button>

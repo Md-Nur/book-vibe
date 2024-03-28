@@ -42,11 +42,11 @@ const Book = () => {
             <span className="font-bold">Review: </span>
             {book.review}
           </p>
-          <p className="my-3">
+          <p className="my-3 flex gap-1 flex-wrap items-center">
             <span className="font-bold">Tags: </span>
             {book.tags.map((tag, index) => (
               <span
-                className="text-[#23BE0A] bg-[#235a0a0d] rounded-lg text-sm mx-2 p-2"
+                className="text-[#23BE0A] bg-[#235a0a0d] rounded-lg text-sm m-2 p-2"
                 key={index}
               >
                 #{tag}

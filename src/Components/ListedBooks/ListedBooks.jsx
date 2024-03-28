@@ -34,7 +34,7 @@ const ListedBooks = () => {
         </select>
       </div>
 
-      <section className="mx-20">
+      <section className="mx-2 lg:mx-20">
         <div role="tablist" className="tabs tabs-lifted">
           <input
             type="radio"

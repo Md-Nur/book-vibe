@@ -19,7 +19,7 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <Links myClasses="menu menu-horizontal px-1 gap-3" />
       </div>
-      <div className="navbar-end space-x-3 ">
+      <div className="navbar-end space-x-3 hidden sm:inline-flex">
         <button className="text-white btn btn-success">Sign In</button>
         <button className="text-white btn btn-info">Sign Up</button>
       </div>
