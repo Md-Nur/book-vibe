@@ -14,8 +14,8 @@ const ListedBooks = () => {
     fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
-        setReading(data.filter((book) => readingIds.includes(book.bookId)));
-        setWishList(data.filter((book) => wishListIds.includes(book.bookId)));
+        setReading(data.filter((book) => readingIds?.includes(book.bookId)));
+        setWishList(data.filter((book) => wishListIds?.includes(book.bookId)));
       });
   }, []);
 
