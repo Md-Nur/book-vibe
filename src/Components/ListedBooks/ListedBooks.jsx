@@ -5,6 +5,7 @@ import ListedCard from "./ListedCard";
 const ListedBooks = () => {
   const [reading, setReading] = useState([]);
   const [wishList, setWishList] = useState([]);
+  const [showTab1, setShowTab1] = useState(true);
 
   useEffect(() => {
     const readingIds = getReading();
@@ -50,7 +51,8 @@ const ListedBooks = () => {
             role="tab"
             className="tab"
             aria-label="Reading Books"
-            checked
+            checked={showTab1}
+            onClick={() => setShowTab1(true)}
           />
           <div
             role="tabpanel"
@@ -67,6 +69,8 @@ const ListedBooks = () => {
             role="tab"
             className="tab"
             aria-label="Wishlist Books"
+            checked={!showTab1}
+            onClick={() => setShowTab1(false)}
           />
           <div
             role="tabpanel"
